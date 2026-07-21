@@ -4,69 +4,516 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Privacy Policy — Divo</title>
+  <meta name="description" content="Divo LLC Privacy Policy" />
   <style>
     :root {
       --thunderbolt: #1a8fff;
       --dusk: #1a2b6b;
       --ink: #0e1330;
       --muted: #6b7594;
+      --border: #e8ebf2;
+      --paper: #ffffff;
+      --soft: #f7f9fc;
     }
+
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
+
+    html, body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       color: var(--ink);
-      background: #fff;
+      background: var(--paper);
       -webkit-font-smoothing: antialiased;
+    }
+
+    body {
       display: flex;
       flex-direction: column;
       min-height: 100vh;
     }
+
     .topbar {
       background: linear-gradient(135deg, var(--thunderbolt) 0%, var(--dusk) 100%);
-      color: #fff;
+      color: var(--paper);
       padding: 1.5rem;
     }
+
+    .topbar-inner {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
     .topbar a {
-      color: #fff;
+      color: var(--paper);
       text-decoration: none;
-      font-weight: 600;
-      font-size: 1.25rem;
+      font-weight: 700;
+      font-size: 1.35rem;
       letter-spacing: -0.02em;
     }
+
     main {
       flex: 1;
-      max-width: 720px;
+      max-width: 820px;
       margin: 0 auto;
-      padding: 3rem 1.5rem;
+      padding: 3rem 1.5rem 4rem;
+      width: 100%;
     }
+
     h1 {
-      font-size: 2rem;
-      margin-bottom: 1.5rem;
+      font-size: 2.25rem;
       font-weight: 700;
       letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
     }
-    p {
-      font-size: 1.05rem;
-      line-height: 1.65;
+
+    .meta {
       color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 2.5rem;
     }
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+    }
+
+    h3 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: var(--ink);
+    }
+
+    p, li {
+      font-size: 1.02rem;
+      line-height: 1.7;
+      color: var(--ink);
+    }
+
+    p { margin-bottom: 1rem; }
+
+    ul, ol {
+      margin: 0 0 1rem 1.5rem;
+    }
+
+    li { margin-bottom: 0.4rem; }
+
+    a {
+      color: var(--thunderbolt);
+      text-decoration: none;
+    }
+
+    a:hover { text-decoration: underline; }
+
+    code {
+      font-family: "SF Mono", Menlo, Monaco, Consolas, monospace;
+      font-size: 0.9em;
+      background: var(--soft);
+      padding: 0.1rem 0.35rem;
+      border-radius: 3px;
+      color: var(--dusk);
+    }
+
+    strong { font-weight: 600; }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 2.5rem 0;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      margin: 1rem 0 1.5rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 0.75rem 0.85rem;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+      line-height: 1.5;
+    }
+
+    th {
+      background: var(--soft);
+      font-weight: 600;
+      color: var(--ink);
+    }
+
     footer {
-      border-top: 1px solid #e8ebf2;
-      padding: 1.5rem;
+      border-top: 1px solid var(--border);
+      padding: 2rem 1.5rem;
       text-align: center;
       font-size: 0.9rem;
       color: var(--muted);
     }
-    footer a { color: var(--muted); text-decoration: none; }
-    footer a:hover { color: var(--thunderbolt); }
+
+    footer a {
+      color: var(--muted);
+      margin: 0 0.75rem;
+    }
+
+    footer a:hover { color: var(--thunderbolt); text-decoration: none; }
+
+    @media (max-width: 600px) {
+      main { padding: 2rem 1.25rem 3rem; }
+      h1 { font-size: 1.75rem; }
+      h2 { font-size: 1.25rem; }
+      th, td { padding: 0.6rem 0.5rem; font-size: 0.9rem; }
+    }
   </style>
 </head>
 <body>
-  <div class="topbar"><a href="/">Divo</a></div>
+  <div class="topbar">
+    <div class="topbar-inner"><a href="/">Divo</a></div>
+  </div>
+
   <main>
     <h1>Privacy Policy</h1>
-    <p>Our privacy policy is coming soon. For any questions in the meantime, contact <a href="mailto:info@divosplit.com" style="color: var(--thunderbolt);">info@divosplit.com</a>.</p>
+    <p class="meta"><strong>Last updated:</strong> June 13, 2026 &nbsp;·&nbsp; <strong>Effective date:</strong> June 13, 2026</p>
+
+    <p>This Privacy Policy explains how Divo LLC ("<strong>DIVO</strong>", "<strong>we</strong>", "<strong>us</strong>", or "<strong>our</strong>") collects, uses, shares, and protects information when you use the DIVO mobile application (the "<strong>App</strong>"). DIVO is a bill-splitting app that helps you scan receipts, split costs with friends, plan group trips, and track who owes what.</p>
+
+    <p>If you have questions or want to exercise a privacy right, contact us at <a href="mailto:info@divosplit.com"><strong>info@divosplit.com</strong></a> or by mail at <strong>[Mailing address — to be filled before publication]</strong>.</p>
+
+    <hr />
+
+    <h2>1. Plain-language summary</h2>
+    <ul>
+      <li>We collect the email and password you use to sign in, the name you choose to display, and the content you create in the App (splits, receipts, groups, plans, events, messages, bucket lists, friends, etc.).</li>
+      <li>Your data is stored on <strong>Supabase</strong>, our backend provider.</li>
+      <li>When you scan a receipt, the <strong>receipt image</strong> is sent to a backend function that forwards it to <strong>Anthropic (Claude AI)</strong> to read the line items. Anthropic does not use this data to train its models.</li>
+      <li>We do <strong>not</strong> sell your data, do <strong>not</strong> share it for cross-context behavioral advertising, do <strong>not</strong> show ads, and do <strong>not</strong> use analytics or tracking SDKs.</li>
+      <li>You can request deletion of your account and data at any time by emailing us. We are also building an in-app delete option.</li>
+      <li>DIVO is not intended for children under 13 (under 16 in the EEA/UK).</li>
+    </ul>
+
+    <hr />
+
+    <h2>2. Information we collect</h2>
+
+    <h3>2.1 Information you give us when creating an account</h3>
+    <ul>
+      <li><strong>Email address</strong> (used as your login and for account-related messages).</li>
+      <li><strong>Password</strong> (handled by our authentication provider, Supabase; we never see your plaintext password).</li>
+      <li><strong>Display name</strong> (the name shown to your friends and groups).</li>
+    </ul>
+
+    <h3>2.2 Information automatically generated for your profile</h3>
+    <ul>
+      <li>A user identifier (UUID).</li>
+      <li>Your initials (derived from your display name).</li>
+      <li>A hex color used for your avatar.</li>
+      <li>Account creation timestamp.</li>
+    </ul>
+
+    <h3>2.3 Content you create in the App</h3>
+    <p>We store the content you create so the App can show it to you and the people you share it with:</p>
+    <ul>
+      <li><strong>Splits</strong>: titles, dates, tax/tip values, category tag, members, who paid, approvals, and settled state.</li>
+      <li><strong>Receipt items</strong>: name, quantity, price, who's assigned, who paid; discounts.</li>
+      <li><strong>Receipt photos</strong>: when you scan a receipt with the camera or upload one from your photo library, the image is sent to our backend for AI processing (see Section 6). The original image itself is <strong>not stored on our backend</strong> after processing; only the <strong>structured text</strong> extracted from it (line items, totals, restaurant name) is stored.</li>
+      <li><strong>Groups</strong>: name, emoji, members, roles, joined-at timestamps.</li>
+      <li><strong>Group messages</strong> (legacy): text content if your account has any historical messages.</li>
+      <li><strong>Events</strong>: title, emoji, date/time, free-text location and address, notes, color, organizer, and ❤️ reactions.</li>
+      <li><strong>Plans and plan ideas</strong>: titles, date ranges, ideas with names/locations/notes/times, schedule, and per-member approvals.</li>
+      <li><strong>Bucket list items, collections, favorites, and saved items</strong>.</li>
+      <li><strong>Friends and friend requests</strong> (who's connected to whom, favorite status).</li>
+      <li><strong>Notifications</strong> (in-app notifications generated by your activity).</li>
+    </ul>
+
+    <h3>2.4 Location-related information</h3>
+    <p>DIVO does <strong>not</strong> request access to your device's GPS location. When you add a location to a split, event, plan idea, or bucket item, the App uses Apple's <strong>MapKit</strong> to autocomplete and geocode the text <strong>you type</strong>. The text and the geocoded address you select are stored with that item. We do not track your real-time location.</p>
+
+    <h3>2.5 Information stored only on your device</h3>
+    <ul>
+      <li><strong>Authentication session token</strong>: stored in the iOS Keychain so you stay signed in (handled by the Supabase iOS SDK).</li>
+      <li><strong>App preferences</strong>: your selected view modes and a list of event IDs you've already viewed (so we can show a "New" badge for unseen events). This is stored in <code>UserDefaults</code> on your device only.</li>
+    </ul>
+
+    <h3>2.6 Information we do <em>not</em> collect</h3>
+    <p>We do not collect, and the App does not request:</p>
+    <ul>
+      <li>Your precise or coarse GPS location.</li>
+      <li>Your contacts.</li>
+      <li>Microphone, motion, or health data.</li>
+      <li>Calendar or reminders data.</li>
+      <li>Photos beyond the specific receipt image you choose in the system photo picker.</li>
+      <li>Advertising identifiers (IDFA). The App does not call <code>ATTrackingManager</code> and is not configured for advertising tracking.</li>
+      <li>Crash logs or analytics events through any third-party SDK.</li>
+    </ul>
+
+    <hr />
+
+    <h2>3. iOS permissions</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Permission</th><th>Why we ask</th><th>Where it's set</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>Camera</strong> (<code>NSCameraUsageDescription</code>)</td>
+            <td>To scan paper receipts so you can split a bill. The captured image is sent to our AI receipt-parsing service (see Section 6).</td>
+            <td>"DIVO uses your camera to scan receipts."</td>
+          </tr>
+          <tr>
+            <td><strong>Photo library</strong> (via system picker)</td>
+            <td>You can pick an existing photo of a receipt instead of using the camera. We use iOS's sandboxed <strong>PHPicker</strong>, which returns only the specific image you select; we do not request full photo library access.</td>
+            <td>No permission prompt is shown for PHPicker.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p>We do not request location, contacts, microphone, motion, health, push notifications, or tracking permissions in this version of the App.</p>
+
+    <hr />
+
+    <h2>4. How we use your information</h2>
+    <p>We use the information we collect to:</p>
+    <ul>
+      <li>Create and maintain your account.</li>
+      <li>Provide the App's core features: splitting bills, calculating who owes who, hosting your groups, syncing plans and events, showing notifications.</li>
+      <li>Parse receipt images you scan into structured line items (using the AI service described in Section 6).</li>
+      <li>Send you friend-request and group-activity notifications <strong>inside the App</strong> (we do not currently send push notifications or marketing emails).</li>
+      <li>Diagnose and fix bugs from server-side logs (Supabase logs of requests, without user-content payloads where possible).</li>
+      <li>Comply with legal obligations and enforce our terms.</li>
+    </ul>
+    <p>We do <strong>not</strong> use your information for advertising, marketing personalization, profiling for automated decision-making that has legal effects, or training third-party AI models.</p>
+
+    <hr />
+
+    <h2>5. Who can see your content</h2>
+    <ul>
+      <li><strong>You</strong> can see all content you create.</li>
+      <li><strong>Friends and group members</strong> can see content you share with them. For example, members of a group can see that group's splits, events, plans, bucket items, and messages. Friends can see that you're friends but not your private splits unless they're in the same group.</li>
+      <li><strong>DIVO staff</strong> can access account data only as needed to operate, debug, or secure the service, or to respond to legal requests.</li>
+      <li><strong>Our service providers</strong> (Section 7) process data on our behalf under contract.</li>
+      <li>We do <strong>not</strong> make your data publicly available, sell it, or share it for advertising.</li>
+    </ul>
+    <p>Row-Level Security (RLS) policies on our database restrict each user to their own data and the data of groups they belong to.</p>
+
+    <hr />
+
+    <h2>6. AI features and Anthropic (Claude)</h2>
+
+    <h3>What uses AI</h3>
+    <p>The <strong>Receipt Scan</strong> feature uses an AI model to extract line items, totals, taxes, tips, restaurant name, and date from a photo of a receipt.</p>
+
+    <h3>How it works</h3>
+    <ol>
+      <li>You take or select a receipt photo in the App.</li>
+      <li>The image is resized (max 1568px on the longest edge, JPEG q0.7), base64-encoded, and sent over HTTPS to our backend.</li>
+      <li>Our backend (a Supabase Edge Function called <code>parse-receipt</code>) authenticates you, then forwards the image to <strong>Anthropic's Claude API</strong> (model <code>claude-sonnet-4-20250514</code>) with a structured prompt asking Claude to return the line items as JSON.</li>
+      <li>Claude's JSON response is parsed by our backend and returned to the App, where it pre-fills the split form for you to review and edit.</li>
+    </ol>
+
+    <h3>What's sent to Anthropic</h3>
+    <p><strong>Only the receipt image</strong> is sent to Anthropic. We do not send your email address, name, user ID, or any other content. The request is made by our backend using our own API key, not yours.</p>
+
+    <h3>What Anthropic does with the data</h3>
+    <p>Anthropic processes the image to generate the structured response. Under Anthropic's Commercial Terms of Service, <strong>inputs and outputs from API requests are not used to train Anthropic's models</strong> and are retained only as needed to provide the service and meet legal obligations. For details see Anthropic's privacy policy at <a href="https://www.anthropic.com/legal/privacy">anthropic.com/legal/privacy</a> and Anthropic's terms at <a href="https://www.anthropic.com/legal/commercial-terms">anthropic.com/legal/commercial-terms</a>.</p>
+
+    <h3>Storage</h3>
+    <p>Our backend does <strong>not</strong> persist the receipt image. It is held only in memory for the duration of the request. The <strong>structured text</strong> (item names, prices, etc.) returned by Claude is stored with your split.</p>
+
+    <h3>Accuracy disclaimer</h3>
+    <p>AI output can be wrong. Receipt parsing may misread item names, prices, or totals; it may miss items, mis-assign quantities, or get the date wrong. <strong>Always review the parsed receipt before saving a split.</strong> The App shows the AI's output for confirmation; nothing is finalized until you save it. DIVO is not a tax, accounting, or financial-advice service.</p>
+
+    <hr />
+
+    <h2>7. Service providers (sub-processors)</h2>
+    <p>We use the following service providers to operate the App. Each processes data on our behalf under a contract that limits use to providing the service.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Provider</th><th>Purpose</th><th>Data received</th><th>Location</th><th>Privacy policy</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>Supabase</strong> (Supabase Inc.)</td>
+            <td>Database, authentication, realtime sync, edge functions</td>
+            <td>All account data and user content described in Section 2</td>
+            <td><code>us-east-1</code> (US East, N. Virginia, USA)</td>
+            <td><a href="https://supabase.com/privacy">supabase.com/privacy</a></td>
+          </tr>
+          <tr>
+            <td><strong>Anthropic</strong> (Anthropic, PBC)</td>
+            <td>AI receipt parsing (via our Supabase Edge Function)</td>
+            <td>Receipt images only</td>
+            <td>United States</td>
+            <td><a href="https://www.anthropic.com/legal/privacy">anthropic.com/legal/privacy</a></td>
+          </tr>
+          <tr>
+            <td><strong>Apple</strong> (Apple Inc.)</td>
+            <td>iOS frameworks for in-app maps (<code>MapKit</code>) and geocoding</td>
+            <td>Location strings you type into the App</td>
+            <td>Apple-operated infrastructure</td>
+            <td><a href="https://www.apple.com/legal/privacy/">apple.com/legal/privacy</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p>We do not use analytics, advertising, crash-reporting, or marketing service providers.</p>
+
+    <hr />
+
+    <h2>8. International data transfers</h2>
+    <p>If you use the App from outside the United States, your data will be transferred to and stored on servers in that country. When personal data is transferred from the European Economic Area ("EEA"), United Kingdom, or Switzerland to the United States or other countries, we rely on appropriate safeguards including the <strong>EU Standard Contractual Clauses (SCCs)</strong> and the <strong>UK International Data Transfer Addendum</strong> where applicable. Our providers (Supabase, Anthropic) make these clauses available as part of their data processing agreements.</p>
+
+    <hr />
+
+    <h2>9. Data retention</h2>
+    <ul>
+      <li><strong>Account data</strong> (profile, friends, groups, splits, events, plans, etc.) is retained for as long as your account exists.</li>
+      <li><strong>Receipt images</strong> sent to the AI parser are not persisted by our backend after the request completes. Anthropic retains API inputs only as needed to provide the service and to meet legal obligations, per its terms.</li>
+      <li><strong>Server logs</strong> at Supabase may contain timestamps, IP addresses, and request metadata, retained per Supabase's standard retention windows.</li>
+      <li><strong>Deleted items</strong> (splits, groups, plans, etc.) are removed from the database on delete; database backups may retain a copy for up to 30 days before being overwritten.</li>
+      <li><strong>Closed accounts</strong>: when you delete your account, your profile and content are cascaded-deleted from our database. Anonymous, aggregated, or de-identified data may be retained indefinitely.</li>
+    </ul>
+
+    <hr />
+
+    <h2>10. Your rights and choices</h2>
+    <p>You can do the following at any time:</p>
+    <ul>
+      <li><strong>Access</strong> the personal information we hold about you.</li>
+      <li><strong>Correct</strong> inaccurate information (you can edit your display name and the content you create directly in the App).</li>
+      <li><strong>Delete</strong> your account and the personal information associated with it.</li>
+      <li><strong>Export</strong> a copy of your account data in a portable format.</li>
+      <li><strong>Object to</strong> or <strong>restrict</strong> certain processing.</li>
+      <li><strong>Withdraw consent</strong> where we rely on consent as a legal basis (Section 11).</li>
+      <li><strong>Opt out of "sale" or "sharing"</strong> for cross-context behavioral advertising — though we do not engage in either (Section 12).</li>
+      <li><strong>Lodge a complaint</strong> with a data protection authority.</li>
+    </ul>
+    <p>To make a request, email <a href="mailto:info@divosplit.com"><strong>info@divosplit.com</strong></a> from the email address associated with your account. We aim to respond within 30 days (or the legally required timeframe for your jurisdiction). We may ask you to verify your identity before fulfilling certain requests.</p>
+    <p><strong>Account deletion (interim flow):</strong> at the time of this policy's effective date, account deletion is processed by emailing <a href="mailto:info@divosplit.com"><strong>info@divosplit.com</strong></a> from your account email; we delete your account and cascade-delete your data within 30 days. We are adding an <strong>in-app "Delete Account" option</strong> to a future release.</p>
+
+    <hr />
+
+    <h2>11. Legal bases for processing (EEA, UK, Switzerland)</h2>
+    <p>If you are in the EEA, the United Kingdom, or Switzerland, we rely on the following legal bases under the <strong>GDPR</strong> and <strong>UK GDPR</strong> to process your personal data:</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Processing</th><th>Legal basis</th></tr></thead>
+        <tbody>
+          <tr><td>Creating and authenticating your account; providing the App's core features</td><td><strong>Contract</strong> (Art. 6(1)(b)) — necessary to perform the agreement with you</td></tr>
+          <tr><td>Diagnostics, security, and fraud prevention; preventing abuse</td><td><strong>Legitimate interests</strong> (Art. 6(1)(f)) — to operate a secure service</td></tr>
+          <tr><td>Sending an AI-parsed receipt to Anthropic when you scan a receipt</td><td><strong>Contract</strong> (Art. 6(1)(b)) — necessary to deliver the feature you requested</td></tr>
+          <tr><td>Complying with legal obligations</td><td><strong>Legal obligation</strong> (Art. 6(1)(c))</td></tr>
+          <tr><td>Any optional features (none currently)</td><td><strong>Consent</strong> (Art. 6(1)(a)) — withdrawable at any time</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>We do not process special categories of personal data under Article 9.</p>
+
+    <h3>Your GDPR/UK GDPR rights</h3>
+    <p>You have the rights of <strong>access, rectification, erasure ("right to be forgotten"), restriction, portability, and objection</strong>, as well as the right <strong>not to be subject to solely automated decision-making with legal or similarly significant effects</strong> (we do not engage in such decision-making). You can withdraw any consent at any time.</p>
+    <p>You can complain to:</p>
+    <ul>
+      <li>The <strong>data protection authority in your EU member state</strong> (list: <a href="https://edpb.europa.eu/about-edpb/about-edpb/members_en">edpb.europa.eu</a>).</li>
+      <li>The <strong>UK Information Commissioner's Office (ICO)</strong> at <a href="https://ico.org.uk/make-a-complaint/">ico.org.uk/make-a-complaint</a>.</li>
+      <li>The <strong>Swiss Federal Data Protection and Information Commissioner (FDPIC)</strong> at <a href="https://www.edoeb.admin.ch/">edoeb.admin.ch</a>.</li>
+    </ul>
+
+    <h3>Data Protection Officer and EU/UK Representative</h3>
+    <p>We have not appointed a Data Protection Officer or an EU/UK Representative; we are not required to do so based on our processing activities. Please contact us at the email above for any data-protection question.</p>
+
+    <hr />
+
+    <h2>12. California privacy rights (CCPA / CPRA)</h2>
+    <p>If you are a California resident, the <strong>California Consumer Privacy Act</strong> as amended by the <strong>California Privacy Rights Act</strong> gives you specific rights.</p>
+
+    <h3>Categories of personal information we collect</h3>
+    <p>In the prior 12 months we have collected the following categories (per Cal. Civ. Code §1798.140):</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Category</th><th>Examples in DIVO</th><th>Disclosed for a business purpose?</th></tr></thead>
+        <tbody>
+          <tr><td><strong>A. Identifiers</strong></td><td>Email, user UUID, IP address from server requests</td><td>Yes — to Supabase as our processor</td></tr>
+          <tr><td><strong>B. Customer records</strong></td><td>Display name</td><td>Yes — to Supabase</td></tr>
+          <tr><td><strong>K. Inferences</strong></td><td>None</td><td>—</td></tr>
+          <tr><td><strong>L. Sensitive PI</strong></td><td>Account credentials (password — handled only by Supabase Auth, never seen by us in plaintext)</td><td>Yes — to Supabase</td></tr>
+          <tr><td><strong>User-generated content</strong></td><td>Splits, receipts, group messages, events, plans, bucket items, etc.</td><td>Yes — to Supabase; receipt images to Anthropic for processing</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Sale and sharing</h3>
+    <p>We do <strong>not</strong> "sell" personal information and we do <strong>not</strong> "share" personal information for cross-context behavioral advertising as those terms are defined under the CCPA/CPRA. We do not have a "Do Not Sell or Share My Personal Information" link because we do not engage in either practice. We also do not knowingly sell or share the personal information of consumers under 16.</p>
+
+    <h3>Sensitive personal information</h3>
+    <p>The only sensitive personal information we process is your <strong>account log-in credentials</strong> (your password), which we collect solely to authenticate you and which is handled by Supabase Auth. We do not use or disclose it for any purpose that would trigger a right to limit under §1798.121.</p>
+
+    <h3>Your CCPA/CPRA rights</h3>
+    <ul>
+      <li><strong>Right to know</strong> what personal information we collect, use, and disclose.</li>
+      <li><strong>Right to delete</strong> your personal information.</li>
+      <li><strong>Right to correct</strong> inaccurate information.</li>
+      <li><strong>Right to opt out</strong> of sale or sharing (not applicable — we do neither).</li>
+      <li><strong>Right to limit</strong> the use of sensitive personal information (not applicable as described above).</li>
+      <li><strong>Right to non-discrimination</strong> for exercising these rights.</li>
+    </ul>
+    <p>To exercise these rights, email <a href="mailto:info@divosplit.com"><strong>info@divosplit.com</strong></a>. You may use an <strong>authorized agent</strong>; we will ask the agent to provide proof of authorization and may verify your identity directly.</p>
+
+    <h3>"Shine the Light"</h3>
+    <p>California Civil Code §1798.83 lets California residents request information about disclosures to third parties for direct-marketing purposes. We do <strong>not</strong> disclose personal information for third-party direct-marketing purposes.</p>
+
+    <hr />
+
+    <h2>13. Other U.S. state privacy rights</h2>
+    <p>If you are a resident of <strong>Virginia, Colorado, Connecticut, Utah, Texas, Oregon, Montana, Delaware, New Hampshire, New Jersey, Iowa, Tennessee, Indiana, Minnesota, Maryland, Kentucky, Rhode Island</strong>, or another U.S. state with a comprehensive privacy law, you may have rights similar to those described in Section 12, including the rights to <strong>access, correct, delete, port, and opt out of targeted advertising, sale, or profiling</strong>. We do <strong>not</strong> engage in targeted advertising, sale of personal information, or profiling that produces legal or similarly significant effects.</p>
+    <p>To exercise these rights, contact us at <a href="mailto:info@divosplit.com"><strong>info@divosplit.com</strong></a>. You may appeal a denied request by replying to our decision; we will respond to appeals within the timeframe required by your state's law.</p>
+
+    <hr />
+
+    <h2>14. Children's privacy (COPPA)</h2>
+    <p>DIVO is <strong>not directed at children under 13</strong> and we do not knowingly collect personal information from children under 13. The App requires you to create an account with an email address, and by doing so you represent that you are at least 13 years old (or 16 in the EEA/UK).</p>
+    <p>If you believe a child under 13 (or under 16 in the EEA/UK) has provided personal information through the App, please contact us at <a href="mailto:info@divosplit.com"><strong>info@divosplit.com</strong></a> and we will delete the account and associated data.</p>
+
+    <hr />
+
+    <h2>15. Security</h2>
+    <ul>
+      <li>All traffic between the App and our backend uses <strong>HTTPS/TLS</strong>.</li>
+      <li>Passwords are handled by Supabase Auth, which stores them as cryptographic hashes; we never see plaintext passwords.</li>
+      <li>Your auth session token is stored in the iOS <strong>Keychain</strong>.</li>
+      <li>Our database enforces <strong>row-level security</strong> so that one user cannot read or modify another user's content outside of the groups they're in.</li>
+      <li>Server-side <code>SECURITY DEFINER</code> functions and triggers handle privileged operations like creating notifications, so the App never has more access than it needs.</li>
+    </ul>
+    <p>No system is perfectly secure. If you believe your account has been compromised, contact us immediately at <a href="mailto:info@divosplit.com"><strong>info@divosplit.com</strong></a>.</p>
+
+    <hr />
+
+    <h2>16. Changes to this policy</h2>
+    <p>We may update this Privacy Policy from time to time. When we do, we will update the "Last updated" date at the top. Material changes will be brought to your attention in the App or by email. Continuing to use the App after the changes take effect means you accept the updated policy.</p>
+
+    <hr />
+
+    <h2>17. Contact</h2>
+    <p>Questions, requests, or complaints:</p>
+    <p>
+      <strong>Divo LLC</strong><br />
+      [Mailing address — to be filled before publication]<br />
+      Email: <a href="mailto:info@divosplit.com">info@divosplit.com</a><br />
+      Governing law: [Governing law — to be filled before publication]
+    </p>
   </main>
-  <footer><a href="/">← Back to home</a></footer>
+
+  <footer>
+    <div style="margin-bottom: 0.75rem;">
+      <a href="/">Home</a>
+      <a href="/terms.html">Terms of Service</a>
+      <a href="/support.html">Support</a>
+    </div>
+    <div>© 2026 Divo LLC. All rights reserved.</div>
+  </footer>
 </body>
 </html>
