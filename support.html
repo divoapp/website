@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support — Divo</title>
+  <style>
+    :root {
+      --thunderbolt: #1a8fff;
+      --dusk: #1a2b6b;
+      --ink: #0e1330;
+      --muted: #6b7594;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--ink);
+      background: #fff;
+      -webkit-font-smoothing: antialiased;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    .topbar {
+      background: linear-gradient(135deg, var(--thunderbolt) 0%, var(--dusk) 100%);
+      color: #fff;
+      padding: 1.5rem;
+    }
+    .topbar a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.25rem;
+      letter-spacing: -0.02em;
+    }
+    main {
+      flex: 1;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    p {
+      font-size: 1.05rem;
+      line-height: 1.65;
+      color: var(--muted);
+    }
+    footer {
+      border-top: 1px solid #e8ebf2;
+      padding: 1.5rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    footer a { color: var(--muted); text-decoration: none; }
+    footer a:hover { color: var(--thunderbolt); }
+  </style>
+</head>
+<body>
+  <div class="topbar"><a href="/">Divo</a></div>
+  <main>
+    <h1>Support</h1>
+    <p>Our privacy policy is coming soon. For any questions in the meantime, contact <a href="mailto:info@divosplit.com" style="color: var(--thunderbolt);">info@divosplit.com</a>.</p>
+  </main>
+  <footer><a href="/">← Back to home</a></footer>
+</body>
+</html>

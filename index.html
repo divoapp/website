@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Divo</title>
+  <meta name="description" content="Divo LLC — software built with care." />
+  <style>
+    :root {
+      --thunderbolt: #1a8fff;
+      --dusk: #1a2b6b;
+      --ink: #0e1330;
+      --muted: #6b7594;
+      --paper: #ffffff;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      height: 100%;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, var(--thunderbolt) 0%, var(--dusk) 100%);
+      color: var(--paper);
+      padding: 6rem 1.5rem 5rem;
+      text-align: center;
+    }
+
+    .hero-inner {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .logo {
+      font-size: 2.5rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.75rem;
+    }
+
+    .tagline {
+      font-size: 1.15rem;
+      opacity: 0.9;
+      font-weight: 400;
+    }
+
+    main {
+      flex: 1;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: var(--ink);
+    }
+
+    p {
+      font-size: 1.05rem;
+      line-height: 1.65;
+      color: var(--ink);
+      margin-bottom: 1rem;
+    }
+
+    a {
+      color: var(--thunderbolt);
+      text-decoration: none;
+      transition: opacity 0.15s ease;
+    }
+
+    a:hover {
+      opacity: 0.7;
+    }
+
+    .contact-email {
+      display: inline-block;
+      font-size: 1.1rem;
+      font-weight: 500;
+      padding: 0.5rem 0;
+    }
+
+    footer {
+      border-top: 1px solid #e8ebf2;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .footer-links {
+      margin-bottom: 0.75rem;
+    }
+
+    .footer-links a {
+      color: var(--muted);
+      margin: 0 0.75rem;
+    }
+
+    .footer-links a:hover {
+      color: var(--thunderbolt);
+      opacity: 1;
+    }
+
+    @media (max-width: 600px) {
+      .hero { padding: 4rem 1.25rem 3.5rem; }
+      .logo { font-size: 2rem; }
+      main { padding: 3rem 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="logo">Divo</div>
+      <div class="tagline">Software built with care.</div>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h2>About</h2>
+      <p>
+        Divo LLC is a software company based in Texas. We design and build
+        thoughtful tools that solve real problems.
+      </p>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p>
+        Get in touch:
+        <a class="contact-email" href="mailto:info@divosplit.com">info@divosplit.com</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-links">
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/terms.html">Terms of Service</a>
+      <a href="/support.html">Support</a>
+    </div>
+    <div>© 2026 Divo LLC. All rights reserved.</div>
+  </footer>
+</body>
+</html>
