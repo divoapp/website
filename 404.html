@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Divo</title>
+  <meta name="description" content="Split bills with friends on Divo." />
+  <meta property="og:title" content="Add me on Divo" />
+  <meta property="og:description" content="Split bills with me on Divo." />
+  <meta property="og:image" content="https://www.divosplit.com/img/icon.png" />
+  <link rel="icon" href="/img/icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --blue-top: #2A97D6;
+      --blue-bottom: #086099;
+      --accent: #0077B6;
+      --ink: #1A1D26;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+      min-height: 100vh;
+      color: #fff;
+      background: linear-gradient(180deg, var(--blue-top), var(--blue-bottom));
+      -webkit-font-smoothing: antialiased;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 72px max(24px, env(safe-area-inset-left)) 48px;
+      text-align: center;
+    }
+    a { color: inherit; text-decoration: none; }
+    .icon { width: 96px; height: 96px; border-radius: 22px; box-shadow: 0 12px 32px rgba(2, 40, 70, .35); }
+    .eyebrow { margin-top: 32px; font-size: 17px; font-weight: 500; opacity: .85; }
+    h1 { margin-top: 8px; font-size: clamp(40px, 12vw, 64px); font-weight: 800; letter-spacing: -1.5px; word-break: break-word; }
+    .lede { margin-top: 16px; max-width: 26rem; font-size: 17px; line-height: 1.5; opacity: .9; }
+    .actions { margin-top: 40px; width: 100%; max-width: 22rem; display: flex; flex-direction: column; gap: 12px; }
+    .button { display: block; padding: 18px 20px; border-radius: 16px; font-size: 18px; font-weight: 700; }
+    .primary { background: #fff; color: var(--accent); }
+    .secondary { background: rgba(255, 255, 255, .16); border: 1px solid rgba(255, 255, 255, .35); }
+    .note { margin-top: 20px; max-width: 22rem; font-size: 15px; line-height: 1.5; opacity: .85; }
+    .home { margin-top: auto; padding-top: 48px; font-size: 15px; opacity: .85; }
+    [hidden] { display: none !important; }
+  </style>
+</head>
+<body>
+  <img class="icon" src="/img/icon.png" alt="Divo" />
+
+  <!-- A friend's link: www.divosplit.com/u/<username>. With Divo installed,
+       iOS opens the app instead of this page (apple-app-site-association). -->
+  <main id="friend" hidden>
+    <p class="eyebrow">Add me on Divo</p>
+    <h1 id="handle"></h1>
+    <p class="lede">Split bills, settle up and see every spot you've been, together.</p>
+    <div class="actions">
+      <a class="button primary" id="get" href="#">Get Divo</a>
+      <a class="button secondary" id="open" href="#">Open in Divo</a>
+    </div>
+    <p class="note">Already have Divo? Tap Open in Divo to add them. New to Divo? Get it, sign up, then come back to this link.</p>
+  </main>
+
+  <main id="missing" hidden>
+    <h1>Not found</h1>
+    <p class="lede">This page doesn't exist.</p>
+  </main>
+
+  <a class="home" href="/">divosplit.com</a>
+
+  <script>
+    // Where "Get Divo" goes. TestFlight while Divo is in beta; switch to
+    // https://apps.apple.com/app/id6822938360 once it's on the App Store.
+    var GET_DIVO = "https://testflight.apple.com/join/7DMqt5ZJ";
+
+    var match = location.pathname.match(/^\/u\/([A-Za-z0-9_]{3,30})\/?$/);
+    if (match) {
+      var handle = match[1].toLowerCase();
+      document.getElementById("handle").textContent = "@" + handle;
+      document.getElementById("get").href = GET_DIVO;
+      document.getElementById("open").href = "divo://u/" + handle;
+      document.title = "Add @" + handle + " on Divo";
+      document.getElementById("friend").hidden = false;
+    } else {
+      document.getElementById("missing").hidden = false;
+    }
+  </script>
+</body>
+</html>

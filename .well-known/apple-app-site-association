@@ -1,0 +1,12 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["V92Y6SLJC2.com.divo.app"],
+        "components": [
+          { "/": "/u/*", "comment": "A friend's profile: opens Add a friend in Divo" }
+        ]
+      }
+    ]
+  }
+}
