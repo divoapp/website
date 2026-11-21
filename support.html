@@ -2,71 +2,145 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Support — Divo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Divo Support</title>
+  <meta name="description" content="Get help with Divo: contact us and answers to common questions." />
+  <link rel="icon" href="/img/icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/page.css" />
+  <link rel="stylesheet" href="/css/doc.css" />
   <style>
-    :root {
-      --thunderbolt: #1a8fff;
-      --dusk: #1a2b6b;
-      --ink: #0e1330;
-      --muted: #6b7594;
+    .doc-lede { margin-top: 14px; font-size: 19px; line-height: 1.5; color: var(--ink-2); max-width: 30rem; }
+    .contact {
+      margin-top: 8px; padding: 22px 0 26px;
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px;
+      border-bottom: 1px solid var(--border);
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      color: var(--ink);
-      background: #fff;
-      -webkit-font-smoothing: antialiased;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
+    .contact .label { font-size: 13px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); }
+    .contact .email { margin-top: 6px; font-size: 22px; font-weight: 700; letter-spacing: -.01em; color: var(--ink); word-break: break-all; }
+    .contact .hint { margin-top: 6px; font-size: 15px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 8px; }
+    .button {
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 12px 20px; border-radius: 999px; border: 0; cursor: pointer;
+      font: inherit; font-size: 15px; font-weight: 600;
+      background: var(--ink); color: var(--bg);
+      transition: transform .15s;
     }
-    .topbar {
-      background: linear-gradient(135deg, var(--thunderbolt) 0%, var(--dusk) 100%);
-      color: #fff;
-      padding: 1.5rem;
+    .button:hover { text-decoration: none; transform: translateY(-1px); }
+    .button.quiet { background: transparent; color: var(--ink); box-shadow: inset 0 0 0 1px var(--border); }
+    main.doc h2.faq { margin-top: 56px; }
+    details { border-bottom: 1px solid var(--border); }
+    summary {
+      list-style: none; cursor: pointer;
+      display: flex; justify-content: space-between; align-items: center; gap: 16px;
+      padding: 20px 0; font-size: 18px; font-weight: 600; letter-spacing: -.01em; color: var(--ink);
     }
-    .topbar a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1.25rem;
-      letter-spacing: -0.02em;
-    }
-    main {
-      flex: 1;
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 3rem 1.5rem;
-    }
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 1.5rem;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-    }
-    p {
-      font-size: 1.05rem;
-      line-height: 1.65;
-      color: var(--muted);
-    }
-    footer {
-      border-top: 1px solid #e8ebf2;
-      padding: 1.5rem;
-      text-align: center;
-      font-size: 0.9rem;
-      color: var(--muted);
-    }
-    footer a { color: var(--muted); text-decoration: none; }
-    footer a:hover { color: var(--thunderbolt); }
+    summary::-webkit-details-marker { display: none; }
+    summary::after { content: "+"; flex: none; font-size: 24px; font-weight: 400; color: var(--ink-3); transition: transform .2s; }
+    details[open] summary::after { transform: rotate(45deg); }
+    details > div { padding: 0 0 22px; }
   </style>
 </head>
 <body>
-  <div class="topbar"><a href="/">Divo</a></div>
-  <main>
-    <h1>Support</h1>
-    <p>Our privacy policy is coming soon. For any questions in the meantime, contact <a href="mailto:info@divosplit.com" style="color: var(--thunderbolt);">info@divosplit.com</a>.</p>
+  <div class="doc">
+    <a class="doc-brand" href="/"><img src="/img/icon.png" alt="" />Divo</a>
+    <h1>How can we help?</h1>
+    <p class="doc-lede">Questions, problems, or ideas. We read every message.</p>
+  </div>
+
+  <main class="doc">
+    <section class="contact">
+      <div>
+        <p class="label">Contact us</p>
+        <p class="email" id="email">info@divosplit.com</p>
+        <p class="hint">Include your Divo username and what happened.</p>
+      </div>
+      <div class="actions">
+        <a class="button" href="mailto:info@divosplit.com?subject=Divo%20support">Email us</a>
+        <button class="button quiet" id="copy" type="button">Copy address</button>
+      </div>
+    </section>
+
+    <h2 class="faq">Common questions</h2>
+
+    <details>
+      <summary>How do I split a bill?</summary>
+      <div>
+        <p>Tap <strong>＋</strong>, then <strong>New split</strong>. Scan the receipt, choose a photo of it, add the items yourself, or type just the total. Add the people who were there, pick who paid, then tap <strong>Finish split</strong> so everyone can see what they owe.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>What's a Tab?</summary>
+      <div>
+        <p>A Tab is one running balance across several splits, for a trip, a weekend, or roommates. Everyone settles once at the end instead of after every bill. Tap <strong>＋</strong>, then <strong>Start a Tab</strong>.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>How do I mark that I've paid someone back?</summary>
+      <div>
+        <p>Open the split and tap <strong>Paid</strong>. The person you paid taps <strong>Received</strong>. Once everyone has paid, the split settles on its own a little later, or the person who paid can tap <strong>Settle up</strong>.</p>
+        <p>Divo keeps track of who owes what. It doesn't move money: you pay each other however you usually do.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>How do I add a friend?</summary>
+      <div>
+        <p>Tap <strong>＋</strong>, then <strong>Add a friend</strong>, and search for their username. You can also share your profile from your profile page: friends can scan your QR code or open your link.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>How does receipt scanning work?</summary>
+      <div>
+        <p>Divo asks before it reads a receipt with AI. If you agree, the photo is read by Anthropic's Claude to pull out the items, tax and tip, and isn't kept. You can turn this off any time in <strong>Settings → Privacy and security</strong>. See the <a href="/privacy">privacy policy</a> for the details.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>I forgot my password</summary>
+      <div>
+        <p>On the sign-in screen, tap <strong>Forgot password?</strong>. We'll email a code to the address on your account. If you signed up without an email, write to us from any address with your username and we'll help.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>How do I cancel Premium?</summary>
+      <div>
+        <p>Go to your profile, tap <strong>Manage Premium</strong>, then <strong>Cancel subscription</strong>. Premium is billed through the App Store, so you can also cancel in your iPhone's Settings under your Apple Account and Subscriptions. Premium stays on until the end of the period you paid for.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>How do I delete my account?</summary>
+      <div>
+        <p>Open <strong>Settings</strong> from your profile and tap <strong>Delete account</strong> at the bottom. This permanently deletes your account and your data. If you'd rather we did it, email us from the address on your account.</p>
+      </div>
+    </details>
   </main>
-  <footer><a href="/">← Back to home</a></footer>
+
+  <footer class="footer doc-footer">
+    <nav>
+      <a href="/">Home</a>
+      <a href="/privacy">Privacy Policy</a>
+      <a href="/terms">Terms of Service</a>
+    </nav>
+    © 2026 Divo LLC
+  </footer>
+
+  <script>
+    document.getElementById("copy").addEventListener("click", function () {
+      var button = this;
+      var done = function () { button.textContent = "Copied"; setTimeout(function () { button.textContent = "Copy address"; }, 1600); };
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText("info@divosplit.com").then(done, function () {});
+      }
+    });
+  </script>
 </body>
 </html>
